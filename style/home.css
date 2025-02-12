@@ -1,0 +1,133 @@
+@import url('../style/root.css');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+#bg-video {
+    z-index: -1;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    position: absolute;
+    aspect-ratio: 16 / 9;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+#main-container {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: transparent;
+    display: flex;
+    padding: 0 10%;
+    padding-top: 10%;
+    justify-content: space-between;
+}
+
+#text-fg {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    left: -100%; 
+    animation: slideInText 1s forwards;
+    & > h1 {
+        font-size: 40px;
+        color: white;
+    }
+
+    & > h2 {
+        font-weight: normal;
+        color: white;
+    }
+
+    & > h2::first-letter {
+        font-size: 3em; 
+        font-weight: bold; 
+        float: left; 
+        margin-right: 0.1em; 
+        line-height: 1;
+    }
+}
+
+#logo-fg {
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-items: start;
+    position: relative;
+    right: -100%;
+    animation: slideInLogo 1s forwards;
+
+    & > img {
+        height: fit-content;
+        width: auto;
+    }
+}
+
+
+@keyframes slideInText {
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slideInLogo {
+    to {
+        right: 0;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px);
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: -2.5em; 
+    border-top: 2px solid #8B0000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); 
+    transition: bottom 0.3s, opacity 0.3s; 
+}
+
+.navbar:hover {
+    bottom: 0; 
+    opacity: 1;
+}
+
+.nav-item {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item:hover {
+    background-color: #8B0000; 
+    color: #1a1a1a;
+}
+
+.nav-item.active {
+    background-color: #8B0000; 
+    color: #1a1a1a;
+    border-bottom: 2px solid #ff0000;
+}

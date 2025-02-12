@@ -1,0 +1,28 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Rodchenko Cond';
+    src: url('../media/other/font/Rodchenko-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    visibility: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+.strong-text {
+    font-family: "Anton", serif;
+}
+
+.rammstein-text {
+    font-family: 'Rodchenko Cond', sans-serif;
+}
+
