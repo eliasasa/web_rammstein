@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    color: white;
 }
 
 @font-face {
@@ -16,7 +16,23 @@
 body {
     visibility: hidden;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
 }
+
+#bg-video {
+    z-index: -1;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%); 
+    min-width: 100%;
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+    position: fixed;
+    aspect-ratio: 16 / 9;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 .strong-text {
@@ -30,6 +46,7 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
 .navbar {
+    z-index: 1000;
     display: flex;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.5); 
@@ -79,5 +96,22 @@ body {
     padding-top: 10%;
     justify-content: space-between;
     margin-bottom: 48px;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8B0000;
+    transition: background-color 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff0000;
 }
 
