@@ -43,3 +43,12 @@
 #legado {
     margin-bottom: 10%;
 }
+
+@media (max-width: 1024px) {
+
+    #hist-container {
+        max-width: 100%;
+        margin: 16px 16px 20% 16px;
+        padding: 8px;
+    }
+}

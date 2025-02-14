@@ -14,6 +14,7 @@
     padding: 0 10%;
     padding-top: 10%;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #text-fg {
@@ -69,6 +70,46 @@
     to {
         right: 0;
     }
+}
+
+@media (max-width: 1024px) {
+        
+    #redes-sociais {
+        margin-bottom: 20%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 90vh;    }
+
+    #main-container {
+        flex-direction: row-reverse;
+        padding: 16px 16px 0 16px;
+        justify-content: center;
+        row-gap: 32px;
+        margin: 0;
+
+    }
+
+    #text-fg {
+        width: 100%;
+    }
+
+    #logo-fg {
+        width: fit-content;
+        height: fit-content;
+        justify-content: center;
+
+        img {
+            width: 50%;
+            height: auto;
+        }
+
+
+    }
+
 }
 
 #redes-sociais {
