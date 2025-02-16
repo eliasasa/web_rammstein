@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.rammstein-text {
+    margin: 2rem 0;
+}
+
 .members-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -142,7 +146,7 @@ html {
 .member-info {
     max-width: 800px;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .member-info h2 {

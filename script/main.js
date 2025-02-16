@@ -12,18 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeLink = document.querySelector('.nav-item.active');
 
     const esconder = () => {
-        const links = document.querySelectorAll('.nav-item');
-        let hide = true;
+        if (window.innerWidth <= 768) {
+            const links = document.querySelectorAll('.nav-item');
+            let hide = true;
 
-        links.forEach(link => {
-            if (link === activeLink) {
-                hide = false;
-            }
-            if (hide) {
-                link.classList.add('hidden');
-            }
-        });
-    }
+            links.forEach(link => {
+                if (link === activeLink) {
+                    hide = false;
+                }
+                if (hide) {
+                    link.classList.add('hidden');
+                }
+            });
+        }
+    };
 
     esconder();
 
@@ -63,5 +65,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
